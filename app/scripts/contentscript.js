@@ -59,7 +59,10 @@ function pinComment() {
   commentFrame.find('yt-live-chat-ticker-renderer').after(modelatorComments);
 
   // 非固定コメントのスクロールを有効化
-  commentFrame.find('#button').trigger('click');
+  const scrollButton = commentFrame.find('[aria-label=さらに下のコメントを表示]');
+  if(!scrollButton.prop('disabled')) {
+    scrollButton.trigger('click');
+  }
 }
 
 /**
