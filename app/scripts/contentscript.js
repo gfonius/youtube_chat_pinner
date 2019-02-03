@@ -57,6 +57,9 @@ function pinComment() {
 
   // モデレータコメントをコメント欄上部に表示
   commentFrame.find('yt-live-chat-ticker-renderer').after(modelatorComments);
+
+  // 非固定コメントのスクロールを有効化
+  commentFrame.find('#button').trigger('click');
 }
 
 /**
